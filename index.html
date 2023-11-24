@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>Vico Business Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #7a0092;
+        }
+
+        .card {
+            text-align: center;
+            background-color: #b053fc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+            border-radius: 50%; /* Make the image a circle */
+            object-fit: cover; /* Ensure the image covers the entire circle */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px; /* Add margin to create space between buttons */
+        }
+        p {
+            color: #fff;
+        }
+        h1{
+            color: #fff;
+        }
+
+        @media screen and (min-width: 600px) {
+            /* Adjust styles for larger screens if needed */
+            .card {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./data/marwenvico.jpg" alt="Your Photo">
+        <h1>Marwen Jaballah</h1>
+        <button class="fab fa-github" onclick="openGitHubPortfolio()"></button>
+        <button class="fab fa-solid fa-globe" onclick="openPersonalPortfolio()"></button>
+        <p>Email: marwen.jaballah@polytechnicien.tn</p>
+        <p>Phone: +216 20 545 182</p>
+        <button onclick="downloadCVF()">Download CV </button>
+        <!-- <button onclick="downloadCVE()">Download CV in English</button> -->
+    </div>
+
+    <script>
+        function downloadCVF() {
+            var cvUrl = './data/CV_2023-11-23_Marwen_Jaballah.pdf';
+            window.open(cvUrl, '_blank');
+        }
+/*         function downloadCVE() {
+            var cvUrl = './CV/Khalil Bchir CV English.pdf';
+            window.open(cvUrl, '_blank');
+        } */
+        function openGitHubPortfolio() {
+            var url = 'https://github.com/marwen2025';
+            window.open(url, '_blank');
+        }
+
+        function openPersonalPortfolio() {
+            var url = 'https://test-seven-phi-37.vercel.app/';
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
